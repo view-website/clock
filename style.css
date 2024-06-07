@@ -1,0 +1,115 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: #000e24;
+    text-align: center;
+    scroll-behavior: initial;
+    font-family: "Chathura", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+}
+#clock{
+    height: 250px;
+    width:250px;
+    border-radius: 150px;
+    background-image: 
+    url("https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZiHfZhUru0qEnQO7dbqdLqk1gAp6RYh9Rgcy_Ir0bYV4q0C9DPCncUjyaDQL5Ki8f3WX2rpwhYfl3Kf1ntExLuzRnSv9mJU0s=w836-h910");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.02), 
+    0 -10px 10px rgba(255, 255, 255, 0.05),
+    0 10px 10px rgba(0, 0, 0, 0.01), 
+    0 10px 10px rgba(0, 0, 0, 0.4),
+    inset 0 -10px 10px rgba(255, 255, 255, 0.01), 
+    inset 0 -10px 10px rgba(255, 255, 255, 0.04),
+    inset 0 10px 10px rgba(0, 0, 0, 0.01), 
+    inset 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000e24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+
+/*.clock .hour, .hr{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 60px;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 1000;
+}*/
+.clock .hour, .hr{
+    width: 120px;
+    height: 120px;
+}
+.clock .min, .mn{
+    width: 150px;
+    height: 150px;
+}
+.clock .sec, .sc{
+    width: 170px;
+    height: 170px;
+}
+.hr, .mn, .sc{
+    display:flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+}
+.hr:before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 60px;
+    background: rgb(224, 0, 56);
+    border-radius: 6px 6px 0 0;
+    z-index: 11;
+}
+.mn:before{
+    content: "";
+    position: absolute;
+    width: 4.4px;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    border-radius: 6px 6px 0 0;
+    z-index: 13;
+}
+.sc:before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 105px;
+    background: rgb(255, 255, 255);
+    border-radius: 6px 6px 0 0;
+    z-index: 12;
+}
